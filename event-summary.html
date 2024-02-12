@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM summary</title>
+</head>
+<body>
+    <h1>Final DOM Event handlers</h1>
+    <h3 id="handler-status">Lorem, ipsum dolor.</h3>
+    <p id="input-text-display">Default Input Text</p>
+    <input id="input-field" type="text">
+    <button id="btn-update">Update</button>
+    <br>
+    <br>
+    <button onclick="handleOnClick()">Handle event by Add onclick Function</button>
+    <button id="event-listener">Handle event by addeventListener</button>
+    <script>
+        function handleOnClick(params) {
+            // console.log('button Clicked');
+            const handlerStatus = document.getElementById('handler-status');
+            handlerStatus.innerText = 'Handled by function attatched onclick attribute'
+        }
+
+        document.getElementById('event-listener').addEventListener('click', function () {
+            const handlerStatus = document.getElementById('handler-status');
+            handlerStatus.innerText =' Text updated by add Event Listener button'
+        })
+
+        // option 2 : recape
+        document.getElementById('btn-update').addEventListener("click", function btnUpdate() {
+            // console.log('update button click');
+            const inputField = document.getElementById('input-field');
+            // console.log(inputField .value);
+            const inputText = inputField.value;
+            const p = document.getElementById('input-text-display');
+            p.innerText = inputText;
+            inputField.value = '';
+
+        })
+
+
+    </script>
+</body>
+</html>
