@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegate And Benefit Of Event Bubble</title>
+</head>
+
+<body>
+    <h1>Explor Event Delegate</h1>
+    <section>
+        <!-- ul#list-container>li.item*6>lorem3 -->
+        <ul id="list-container">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Laborum, quibusdam eligendi.</li>
+            <li class="item">Neque, asperiores eos.</li>
+            <li class="item">Perspiciatis, accusantium quod.</li>
+            <li class="item">Eum, vel ut.</li>
+            <li class="item">Totam, possimus quas.</li>
+        </ul>
+        <button id="btn-add-item">Add new Item</button>
+    </section>
+    <script>
+        // const items = document.getElementsByClassName('item');
+        // // console.log(item);
+        // for (const item of items) {
+        //     // console.log(item);
+        //     item.addEventListener('click', function (event) {
+        //         // console.log(item);
+        //         // console.log(event.target.parentNode);
+        //         event.target.parentNode.removeChild(event.target);
+        //     });
+        // }
+            // const listContainer = 
+            document.getElementById('list-container').addEventListener('click', function(event){
+                // console.log(event.target);
+                event.target.parentNode.removeChild(event.target);
+            })
+
+
+
+
+        document.getElementById('btn-add-item').addEventListener('click', function(){
+            const listContainer = document.getElementById('list-container');
+            const li = document.createElement('li');
+            li.innerText  = ' Brand new item added';
+            li.classList.add('item');
+            listContainer.appendChild(li)
+
+        })
+    </script>
+</body>
+
+</html>
