@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>more event</title>
+</head>
+
+<body>
+    <h1> Explore More events</h1>
+    <button id="btn-more">Events</button>
+    <input id="text-field" type="text">
+    <script>
+        // Option -01 : on click
+        // document.getElementById('btn-more').addEventListener('click', function () {
+        //     console.log('Event Triggered');
+        // })
+        // Option -02 :mouseenter
+        // document.getElementById('btn-more').addEventListener('mouseenter', function () {
+        //     console.log('Event Triggered');
+        // })
+
+        // Option -02 : mousemove
+        // document.getElementById('btn-more').addEventListener('mousemove', function () {
+        //     console.log('Event Triggered');
+        // })
+
+        // Option -03 :focus (when cursor click on input field it focused on  )
+        // document.getElementById('text-field').addEventListener('focus', function () {
+        //     console.log('Event Triggered inside the input field');
+        // })
+        // Option -04 :blur (when cursor click on input field it inactive )
+        // document.getElementById('text-field').addEventListener('blur', function () {
+        //     console.log('Event Triggered inside the input field blur');
+        // })
+
+        // Option -05 : keydown ( to show the letter)
+        // document.getElementById('text-field').addEventListener('keydown', function (event) {
+        //     console.log(event);
+        // })
+        // Option -06 : keydown ( to show (-1) letter)
+        // document.getElementById('text-field').addEventListener('keydown', function (event) {
+        //     console.log(event.target.value);
+        // })
+        // Option -06 : keypress ( to show the letter)
+        // document.getElementById('text-field').addEventListener('keypress', function (event) {
+        //     console.log(event.target.value);
+        // })
+
+        // Option -07 : keyup ( to show all the letter)
+        document.getElementById('text-field').addEventListener('keyup', function (event) {
+            console.log(event.target.value);
+        })
+
+    </script>
+</body>
+
+</html>
